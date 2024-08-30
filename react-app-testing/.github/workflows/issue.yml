@@ -1,0 +1,8 @@
+name: Logging event details
+on: [issues, workflow_dispatch]
+jobs:
+   log-info:
+      runs-on: ubuntu-latest
+      steps:
+         - name: Log event details
+           run: echo "event object ${{toJson(github.event)}}"
